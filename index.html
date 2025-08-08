@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel dos Lagos - Hospedagem de Qualidade</title>
+    <meta name="description" content="Hotel dos Lagos oferece acomodações confortáveis com o melhor atendimento. Reserve já sua estadia!">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="https://via.placeholder.com/150x50/14384d/ffffff?text=Hotel+dos+Lagos" alt="Hotel dos Lagos" class="logo-img">
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link active">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#acomodacoes" class="nav-link">Acomodações <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="#standard-simples">Standard Simples</a>
+                            <a href="#standard-ar">Standard com Ar Condicionado</a>
+                            <a href="#apartamento-flat">Apartamento Flat</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contato" class="nav-link">Contato</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="nav-actions">
+                <a href="#reservas" class="btn-reservas">Reservas</a>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section - Carrossel -->
+    <section class="hero" id="home">
+        <div class="carousel-container">
+            <div class="carousel-slide active">
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Hotel dos Lagos - Vista Principal">
+                <div class="carousel-overlay"></div>
+                <div class="carousel-content">
+                    <h1 class="hero-title">Bem-vindo ao Hotel dos Lagos</h1>
+                    <p class="hero-subtitle">Conforto e elegância em cada detalhe da sua hospedagem</p>
+                    <a href="#booking" class="btn-primary">Reserve Agora no Booking</a>
+                </div>
+            </div>
+            
+            <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Acomodações Luxuosas">
+                <div class="carousel-overlay"></div>
+                <div class="carousel-content">
+                    <h1 class="hero-title">Acomodações de Primeira Classe</h1>
+                    <p class="hero-subtitle">Quartos modernos e confortáveis para sua estadia perfeita</p>
+                    <a href="#booking" class="btn-primary">Reserve Agora no Booking</a>
+                </div>
+            </div>
+            
+            <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Localização Privilegiada">
+                <div class="carousel-overlay"></div>
+                <div class="carousel-content">
+                    <h1 class="hero-title">Localização Privilegiada</h1>
+                    <p class="hero-subtitle">Próximo aos principais pontos turísticos e lagos da região</p>
+                    <a href="#booking" class="btn-primary">Reserve Agora no Booking</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Controles do Carrossel -->
+        <button class="carousel-btn prev" id="prevBtn">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="carousel-btn next" id="nextBtn">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        
+        <!-- Indicadores -->
+        <div class="carousel-indicators">
+            <span class="indicator active" data-slide="0"></span>
+            <span class="indicator" data-slide="1"></span>
+            <span class="indicator" data-slide="2"></span>
+        </div>
+    </section>
+
+    <!-- Destaque das Acomodações -->
+    <section class="accommodations" id="acomodacoes">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Nossas Acomodações</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Escolha a opção perfeita para sua estadia</p>
+            
+            <div class="accommodations-grid">
+                <div class="accommodation-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Standard Simples">
+                        <div class="card-overlay">
+                            <div class="overlay-content">
+                                <p>Quarto confortável com todas as comodidades básicas para uma estadia agradável.</p>
+                                <a href="#standard-simples" class="btn-secondary">Ver Mais</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Standard Simples</h3>
+                        <p>Conforto essencial para sua estadia</p>
+                    </div>
+                </div>
+                
+                <div class="accommodation-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Standard com Ar Condicionado">
+                        <div class="card-overlay">
+                            <div class="overlay-content">
+                                <p>Quarto standard com ar condicionado para maior conforto térmico.</p>
+                                <a href="#standard-ar" class="btn-secondary">Ver Mais</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Standard com Ar Condicionado</h3>
+                        <p>Conforto com climatização ideal</p>
+                    </div>
+                </div>
+                
+                <div class="accommodation-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Apartamento Flat">
+                        <div class="card-overlay">
+                            <div class="overlay-content">
+                                <p>Apartamento completo com cozinha e área de estar para estadias prolongadas.</p>
+                                <a href="#apartamento-flat" class="btn-secondary">Ver Mais</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Apartamento Flat</h3>
+                        <p>Espaço amplo e completo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços & Facilidades -->
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Serviços & Facilidades</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Tudo pensado para seu conforto e comodidade</p>
+            
+            <div class="services-grid">
+                <div class="service-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Atendimento 24h</h3>
+                    <p>Recepção disponível 24 horas por dia para atendê-lo a qualquer momento</p>
+                </div>
+                
+                <div class="service-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-coffee"></i>
+                    </div>
+                    <h3>Café da Manhã Incluso</h3>
+                    <p>Café da manhã completo e variado incluído na sua hospedagem</p>
+                </div>
+                
+                <div class="service-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>Estacionamento Seguro</h3>
+                    <p>Estacionamento privativo e seguro para nossos hóspedes</p>
+                </div>
+                
+                <div class="service-item" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-icon">
+                        <i class="fas fa-concierge-bell"></i>
+                    </div>
+                    <h3>Facilidades</h3>
+                    <p>Wi-Fi gratuito, TV a cabo, frigobar e muito mais</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mapa Interativo -->
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Nossa Localização</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Estrategicamente localizado próximo aos principais pontos de interesse</p>
+            
+            <div class="map-container" data-aos="fade-up" data-aos-delay="200">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1975!2d-46.6333824!3d-23.5505199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMzJzAxLjkiUyA0NsKwMzgnMDAuMiJX!5e0!3m2!1spt-BR!2sbr!4v1234567890"
+                    width="100%" 
+                    height="400" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiências -->
+    <section class="experiences">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Experiências Próximas</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Descubra as atrações e pontos de interesse da região</p>
+            
+            <div class="experiences-grid">
+                <div class="experience-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Lago Principal">
+                    <div class="experience-content">
+                        <h3>Lago Principal</h3>
+                        <p>Vista deslumbrante do lago com atividades aquáticas</p>
+                    </div>
+                </div>
+                
+                <div class="experience-card" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Centro Histórico">
+                    <div class="experience-content">
+                        <h3>Centro Histórico</h3>
+                        <p>Arquitetura colonial e cultura local</p>
+                    </div>
+                </div>
+                
+                <div class="experience-card" data-aos="fade-up" data-aos-delay="400">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Restaurantes">
+                    <div class="experience-content">
+                        <h3>Gastronomia Local</h3>
+                        <p>Restaurantes com culinária regional</p>
+                    </div>
+                </div>
+                
+                <div class="experience-card" data-aos="fade-up" data-aos-delay="500">
+                    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Trilhas">
+                    <div class="experience-content">
+                        <h3>Trilhas Ecológicas</h3>
+                        <p>Contato com a natureza e paisagens únicas</p>
+                    </div>
+                </div>
+                
+                <div class="experience-card" data-aos="fade-up" data-aos-delay="600">
+                    <img src="https://images.unsplash.com/photo-1555881400-74d7acaacd8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Praça Central">
+                    <div class="experience-content">
+                        <h3>Praça Central</h3>
+                        <p>Ponto de encontro e eventos culturais</p>
+                    </div>
+                </div>
+                
+                <div class="experience-card" data-aos="fade-up" data-aos-delay="700">
+                    <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mercado Local">
+                    <div class="experience-content">
+                        <h3>Mercado Local</h3>
+                        <p>Produtos artesanais e especialidades regionais</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chamada para Ação Final -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h2>Garanta já a sua hospedagem com o melhor preço e conforto!</h2>
+                <p>Não perca a oportunidade de viver uma experiência única no Hotel dos Lagos</p>
+                <div class="cta-buttons">
+                    <a href="#booking" class="btn-primary">Reservar no Booking</a>
+                    <a href="https://wa.me/5511999999999" class="btn-secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Conversar pelo WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Quem Somos</h3>
+                    <p>O Hotel dos Lagos é referência em hospitalidade, oferecendo acomodações confortáveis e serviços de qualidade. Nossa missão é proporcionar experiências memoráveis aos nossos hóspedes, combinando conforto, elegância e atendimento personalizado.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contatos</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Rua dos Lagos, 123 - Centro</p>
+                        <p><i class="fas fa-phone"></i> (11) 9999-9999</p>
+                        <p><i class="fas fa-envelope"></i> contato@hoteldoslagos.com.br</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#acomodacoes">Acomodações</a>
+                    <a href="#reservas">Reservas</a>
+                    <a href="#contato">Contato</a>
+                    <a href="#termos">Termos e Condições</a>
+                </div>
+                <p>&copy; 2024 Hotel dos Lagos. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botões Fixos -->
+    <div class="fixed-buttons">
+        <a href="https://wa.me/5511999999999" class="whatsapp-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <button class="back-to-top" id="backToTop">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
