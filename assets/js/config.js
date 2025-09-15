@@ -4,7 +4,7 @@ const HotelConfig = {
     hotel: {
         name: "Hotel dos Lagos",
         phone: "+55 11 99999-9999",
-        whatsapp: "5511999999999",
+        whatsapp: "553599052225",
         email: "contato@hoteldoslagos.com.br",
         address: {
             street: "Rua dos Lagos, 123",
@@ -20,11 +20,11 @@ const HotelConfig = {
 
     // URLs e Links
     urls: {
-        booking: "https://www.booking.com/hotel/br/hotel-dos-lagos.html",
+        booking: "https://www.booking.com/hotel/br/dos-lagos",
         website: "https://www.hoteldoslagos.com.br",
         socialMedia: {
-            facebook: "https://facebook.com/hoteldoslagos",
-            instagram: "https://instagram.com/hoteldoslagos",
+            facebook: "https://www.facebook.com/hoteldoslagos",
+    instagram: "https://www.instagram.com/hoteldoslagos/",
             youtube: "https://youtube.com/hoteldoslagos"
         }
     },

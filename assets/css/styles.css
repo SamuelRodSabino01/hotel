@@ -242,15 +242,17 @@ h1, h2, h3, h4, h5, h6 {
 /* Hero Section - Carrossel */
 .hero {
     position: relative;
-    height: 100vh;
     overflow: hidden;
     margin-top: 80px;
+    min-height: 400px;
 }
 
 .carousel-container {
     position: relative;
     width: 100%;
-    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .carousel-slide {
@@ -258,9 +260,11 @@ h1, h2, h3, h4, h5, h6 {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
     opacity: 0;
     transition: opacity 1s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .carousel-slide.active {
@@ -268,9 +272,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .carousel-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
 }
 
 .carousel-overlay {
@@ -527,60 +532,49 @@ h1, h2, h3, h4, h5, h6 {
 /* Experiências */
 .experiences {
     padding: 80px 0;
-    background: var(--light-gray);
+    background: var(--primary-blue);
 }
 
-.experiences-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
+.experiences-layout {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    min-height: 400px;
 }
 
-.experience-card {
-    background: var(--white);
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    box-shadow: var(--box-shadow);
-    transition: var(--transition);
-    position: relative;
+.experiences-content {
+    flex: 1;
+    color: var(--white);
 }
 
-.experience-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+.quote-icon {
+    font-size: 3rem;
+    color: var(--primary-beige);
+    margin-bottom: 1.5rem;
 }
 
-.experience-card img {
+.experiences-title {
+    font-size: 1.8rem;
+    line-height: 1.4;
+    font-weight: 300;
+    margin: 0;
+}
+
+.instagram-handle {
+    color: var(--primary-beige);
+    font-weight: 500;
+}
+
+.experiences-image {
+    flex: 1;
+    max-width: 500px;
+}
+
+.experiences-image img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.experience-card:hover img {
-    transform: scale(1.05);
-}
-
-.experience-content {
-    padding: 1.5rem;
-    border-left: 4px solid var(--primary-beige);
-}
-
-.experience-content h3 {
-    color: var(--primary-blue);
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-    transition: var(--transition);
-}
-
-.experience-card:hover .experience-content h3 {
-    color: var(--hover-blue);
-}
-
-.experience-content p {
-    color: #666;
-    line-height: 1.6;
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 /* CTA Section */
@@ -670,6 +664,10 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 50%;
     text-decoration: none;
     transition: var(--transition);
+}
+
+.social-links a i {
+    color: var(--white);
 }
 
 .social-links a:hover {
@@ -817,9 +815,22 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .accommodations-grid,
-    .services-grid,
-    .experiences-grid {
+    .services-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .experiences-layout {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .experiences-title {
+        font-size: 1.5rem;
+    }
+    
+    .quote-icon {
+        font-size: 2.5rem;
     }
     
     .carousel-btn {

@@ -74,10 +74,31 @@ function initCarousel() {
     const indicators = document.querySelectorAll('.indicator');
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
+    const heroSection = document.querySelector('.hero');
     
     let currentSlide = 0;
     const totalSlides = slides.length;
     let autoSlideInterval;
+
+    // Função para ajustar altura do carousel baseada na imagem
+    function adjustCarouselHeight() {
+        const activeSlide = slides[currentSlide];
+        const img = activeSlide.querySelector('img');
+        
+        if (img.complete) {
+            const aspectRatio = img.naturalHeight / img.naturalWidth;
+            const containerWidth = heroSection.offsetWidth;
+            const calculatedHeight = Math.max(400, containerWidth * aspectRatio);
+            heroSection.style.height = calculatedHeight + 'px';
+        } else {
+            img.onload = function() {
+                const aspectRatio = img.naturalHeight / img.naturalWidth;
+                const containerWidth = heroSection.offsetWidth;
+                const calculatedHeight = Math.max(400, containerWidth * aspectRatio);
+                heroSection.style.height = calculatedHeight + 'px';
+            };
+        }
+    }
 
     // Função para mostrar slide específico
     function showSlide(index) {
@@ -90,6 +111,9 @@ function initCarousel() {
         indicators[index].classList.add('active');
         
         currentSlide = index;
+        
+        // Ajustar altura do carousel
+        setTimeout(adjustCarouselHeight, 100);
     }
 
     // Função para próximo slide
@@ -136,7 +160,6 @@ function initCarousel() {
     });
 
     // Pausar auto-play quando mouse estiver sobre o carrossel
-    const heroSection = document.querySelector('.hero');
     heroSection.addEventListener('mouseenter', stopAutoSlide);
     heroSection.addEventListener('mouseleave', startAutoSlide);
 
@@ -151,6 +174,14 @@ function initCarousel() {
             stopAutoSlide();
             startAutoSlide();
         }
+    });
+
+    // Inicializar altura do carousel
+    adjustCarouselHeight();
+    
+    // Listener para redimensionamento da janela
+    window.addEventListener('resize', () => {
+        adjustCarouselHeight();
     });
 
     // Iniciar auto-play
@@ -633,7 +664,7 @@ function initWhatsApp() {
         whatsappBtn.addEventListener('click', function() {
             const message = encodeURIComponent('Olá! Gostaria de fazer uma reserva no Hotel dos Lagos.');
             const phone = '5511999999999'; // Substitua pelo número real
-            const url = `https://wa.me/${phone}?text=${message}`;
+            const url = `https://api.whatsapp.com/send?phone=${phone}&text=${message}`;
             
             window.open(url, '_blank');
             
@@ -653,7 +684,7 @@ function initBookingButtons() {
     bookingButtons.forEach(button => {
         button.addEventListener('click', function() {
             // Aqui você pode redirecionar para o Booking.com ou sistema próprio
-            const bookingUrl = 'https://www.booking.com/hotel/br/hotel-dos-lagos.html'; // URL real do hotel
+            const bookingUrl = 'https://www.booking.com/hotel/br/dos-lagos'; // URL real do hotel
             window.open(bookingUrl, '_blank');
             
             // Track event
