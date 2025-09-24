@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Standard com Ar Condicionado - Hotel dos Lagos</title>
+    <meta name="description" content="Quarto Standard com Ar Condicionado do Hotel dos Lagos - Conforto e climatização para sua estadia.">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="assets/img/logo.png" alt="Hotel dos Lagos" class="logo-img">
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#acomodacoes" class="nav-link active">Acomodações <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="standard-simples.html">Standard Simples</a>
+                            <a href="standard-ar.html">Standard com Ar Condicionado</a>
+                            <a href="apartamento-flat.html">Apartamento Flat</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#contato" class="nav-link">Contato</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="nav-actions">
+                <a href="https://www.booking.com/hotel/br/dos-lagos" class="btn-reservas" target="_blank">Reservas</a>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-section">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <a href="index.html#acomodacoes">Acomodações</a>
+                <span>/</span>
+                <span>Standard com Ar Condicionado</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Accommodation Details -->
+    <section class="accommodation-details">
+        <div class="container">
+            <div class="accommodation-header">
+                <h1 class="accommodation-title">Standard com Ar Condicionado</h1>
+                <p class="accommodation-subtitle">Conforto e climatização para sua estadia</p>
+            </div>
+
+            <div class="accommodation-content">
+                <!-- Image Gallery -->
+                <div class="accommodation-gallery">
+                    <div class="main-image">
+                        <img src="assets/img/acomodacoes/standard-com-ar-condicionado/1.png" alt="Standard com Ar Condicionado - Imagem Principal" id="mainImage">
+                    </div>
+                    <div class="thumbnail-gallery">
+                        <img src="assets/img/acomodacoes/standard-com-ar-condicionado/1.png" alt="Standard com Ar 1" class="thumbnail active" onclick="changeImage(this)">
+                        <img src="assets/img/acomodacoes/standard-com-ar-condicionado/2.JPG" alt="Standard com Ar 2" class="thumbnail" onclick="changeImage(this)">
+                        <img src="assets/img/acomodacoes/standard-com-ar-condicionado/3.jpg" alt="Standard com Ar 3" class="thumbnail" onclick="changeImage(this)">
+                        <img src="assets/img/acomodacoes/standard-com-ar-condicionado/4.jpg" alt="Standard com Ar 4" class="thumbnail" onclick="changeImage(this)">
+                        <img src="assets/img/acomodacoes/standard-com-ar-condicionado/5.jpg" alt="Standard com Ar 5" class="thumbnail" onclick="changeImage(this)">
+                        <img src="assets/img/acomodacoes/standard-com-ar-condicionado/6.jpg" alt="Standard com Ar 6" class="thumbnail" onclick="changeImage(this)">
+                    </div>
+                </div>
+
+                <!-- Room Information -->
+                <div class="accommodation-info">
+                    <div class="info-card">
+                        <h3><i class="fas fa-info-circle"></i> Informações do Quarto</h3>
+                        <ul class="amenities-list">
+                            <li><i class="fas fa-bed"></i> Cama de casal ou solteiro</li>
+                            <li><i class="fas fa-snowflake"></i> Ar condicionado</li>
+                            <li><i class="fas fa-tv"></i> TV com canais a cabo</li>
+                            <li><i class="fas fa-wifi"></i> Wi-Fi gratuito</li>
+                            <li><i class="fas fa-shower"></i> Banheiro privativo</li>
+                            <li><i class="fas fa-towel"></i> Roupa de cama e banho</li>
+                            <li><i class="fas fa-coffee"></i> Frigobar</li>
+                            <li><i class="fas fa-phone"></i> Telefone</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <h3><i class="fas fa-ruler-combined"></i> Detalhes</h3>
+                        <div class="room-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Tamanho:</span>
+                                <span class="detail-value">18m²</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Ocupação:</span>
+                                <span class="detail-value">1-2 pessoas</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Vista:</span>
+                                <span class="detail-value">Jardim ou rua</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <h3><i class="fas fa-dollar-sign"></i> Preços e Reservas</h3>
+                        <div class="pricing-info">
+                            <div class="price-display">
+                                <span class="price-label">A partir de</span>
+                                <span class="price-value">R$ 150</span>
+                                <span class="price-period">/noite</span>
+                            </div>
+                            <p class="price-note">*Preços sujeitos à disponibilidade e temporada</p>
+                        </div>
+                        <div class="booking-actions">
+                            <a href="https://www.booking.com/hotel/br/dos-lagos" class="btn-primary" target="_blank">
+                                <i class="fas fa-calendar-check"></i> Reservar Agora
+                            </a>
+                            <a href="https://api.whatsapp.com/send?phone=553599052225&text=Ol%C3%A1%2C%20tudo%20bem%3F%F0%9F%91%8B%F0%9F%8F%BB%20Gostaria%20de%20esclarecer%20umas%20d%C3%BAvidas%20sobre%20o%20Standard%20com%20Ar%20Condicionado%20e%20realizar%20uma%20reserva%E2%98%BA%EF%B8%8F" class="btn-secondary" target="_blank">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Accommodations -->
+    <section class="other-accommodations">
+        <div class="container">
+            <h2 class="section-title">Outras Acomodações</h2>
+            <div class="accommodations-grid">
+                <div class="accommodation-card">
+                    <div class="card-image">
+                        <img src="assets/img/acomodacoes/standard-simples/1.png" alt="Standard Simples">
+                    </div>
+                    <div class="card-content">
+                        <h3>Standard Simples</h3>
+                        <p>Conforto e economia</p>
+                        <a href="standard-simples.html" class="btn-primary">Ver Detalhes</a>
+                    </div>
+                </div>
+                <div class="accommodation-card">
+                    <div class="card-image">
+                        <img src="assets/img/acomodacoes/apartamento-flat/1.png" alt="Apartamento Flat">
+                    </div>
+                    <div class="card-content">
+                        <h3>Apartamento Flat</h3>
+                        <p>Espaço amplo e completo</p>
+                        <a href="apartamento-flat.html" class="btn-primary">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Hotel dos Lagos</h3>
+                    <p>Oferecemos acomodações confortáveis e um atendimento excepcional para tornar sua estadia inesquecível.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contato</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Rua dos Lagos, 123 - Centro</p>
+                        <p><i class="fas fa-phone"></i> (35) 99052-2225</p>
+                        <p><i class="fas fa-envelope"></i> contato@hoteldoslagos.com.br</p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/hoteldoslagos" target="_blank"><i class="fab fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/hoteldoslagos/" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://api.whatsapp.com/send?phone=553599052225&text=Ol%C3%A1%2C%20tudo%20bem%3F%F0%9F%91%8B%F0%9F%8F%BB%20Gostaria%20de%20esclarecer%20umas%20d%C3%BAvidas%20e%20realizar%20uma%20reserva%E2%98%BA%EF%B8%8F" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="index.html#acomodacoes">Acomodações</a>
+                    <a href="index.html#contato">Contato</a>
+                </div>
+                <p>&copy; 2024 Hotel dos Lagos. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fixed Buttons -->
+    <div class="fixed-buttons">
+        <a href="https://api.whatsapp.com/send?phone=553599052225&text=Ol%C3%A1%2C%20tudo%20bem%3F%F0%9F%91%8B%F0%9F%8F%BB%20Gostaria%20de%20esclarecer%20umas%20d%C3%BAvidas%20e%20realizar%20uma%20reserva%E2%98%BA%EF%B8%8F" class="whatsapp-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <button class="back-to-top" id="backToTop">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="assets/js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Image Gallery Function
+        function changeImage(thumbnail) {
+            const mainImage = document.getElementById('mainImage');
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            
+            // Update main image
+            mainImage.src = thumbnail.src;
+            mainImage.alt = thumbnail.alt;
+            
+            // Update active thumbnail
+            thumbnails.forEach(thumb => thumb.classList.remove('active'));
+            thumbnail.classList.add('active');
+        }
+    </script>
+</body>
+</html>
