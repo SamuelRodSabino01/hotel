@@ -7,10 +7,10 @@ const HotelConfig = {
         whatsapp: "553599052225",
         email: "contato@hoteldoslagos.com.br",
         address: {
-            street: "Rua dos Lagos, 123",
-            city: "Cidade dos Lagos",
-            state: "SP",
-            zipCode: "12345-678",
+            street: "R. Alterosa, 101 - Jardim Vista Alegre",
+            city: "Alfenas",
+            state: "MG",
+            zipCode: "37132-166",
             coordinates: {
                 lat: -23.5505,
                 lng: -46.6333

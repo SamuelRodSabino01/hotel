@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Hotel dos Lagos</title>
+    <meta name="description" content="Entre em contato com o Hotel dos Lagos. WhatsApp, reservas online e nossa localização.">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="assets/img/logo.png" alt="Hotel dos Lagos" class="logo-img">
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="index.html#acomodacoes" class="nav-link">Acomodações <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="standard-simples.html">Standard Simples</a>
+                            <a href="standard-ar.html">Standard com Ar Condicionado</a>
+                            <a href="apartamento-flat.html">Apartamento Flat</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contato.html" class="nav-link active">Contato</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="nav-actions">
+                <a href="https://www.booking.com/hotel/br/dos-lagos" class="btn-reservas" target="_blank">Reservas</a>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-section">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Contato</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="contact-header">
+                <h1 class="contact-title" data-aos="fade-up">Entre em Contato</h1>
+                <p class="contact-subtitle" data-aos="fade-up" data-aos-delay="100">Estamos aqui para ajudar você a planejar sua estadia perfeita</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="contact-info-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Cards -->
+                <div class="contact-cards">
+                    <div class="contact-card whatsapp-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>WhatsApp</h3>
+                            <p>Fale conosco diretamente pelo WhatsApp para esclarecer dúvidas e fazer reservas</p>
+                            <a href="https://api.whatsapp.com/send?phone=553599052225&text=Ol%C3%A1%2C%20tudo%20bem%3F%F0%9F%91%8B%F0%9F%8F%BB%20Gostaria%20de%20esclarecer%20umas%20d%C3%BAvidas%20e%20realizar%20uma%20reserva%E2%98%BA%EF%B8%8F" class="btn-whatsapp" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Conversar no WhatsApp
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-card booking-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Reservas Online</h3>
+                            <p>Faça sua reserva de forma rápida e segura através do Booking.com</p>
+                            <a href="https://www.booking.com/hotel/br/dos-lagos" class="btn-booking" target="_blank">
+                                <i class="fas fa-calendar-check"></i> Reservar Agora
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-card address-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="card-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Endereço</h3>
+                            <div class="address-info">
+                                <p><i class="fas fa-map-marker-alt"></i> R. Alterosa, 101 - Jardim Vista Alegre, Alfenas - MG, 37132-166</p>
+                                <p><i class="fas fa-phone"></i> (35) 99052-2225</p>
+                                <p><i class="fas fa-envelope"></i> contato@hoteldoslagos.com.br</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Map -->
+    <section class="contact-map-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Nossa Localização</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Estrategicamente localizado próximo aos principais pontos de interesse</p>
+            
+            <div class="map-container" data-aos="fade-up" data-aos-delay="200">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.123456789!2d-45.9491081!3d-21.4358654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b5f5a306fd0d0b%3A0xb677309e3722d8ba!2sHotel%20dos%20Lagos!5e0!3m2!1spt-BR!2sbr!4v1234567890123!5m2!1spt-BR!2sbr"
+                    width="100%" 
+                    height="400" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Actions -->
+    <section class="quick-actions-section">
+        <div class="container">
+            <div class="quick-actions">
+                <h2 class="section-title" data-aos="fade-up">Ações Rápidas</h2>
+                <div class="actions-grid" data-aos="fade-up" data-aos-delay="200">
+                    <a href="https://api.whatsapp.com/send?phone=553599052225&text=Ol%C3%A1%2C%20tudo%20bem%3F%F0%9F%91%8B%F0%9F%8F%BB%20Gostaria%20de%20esclarecer%20umas%20d%C3%BAvidas%20e%20realizar%20uma%20reserva%E2%98%BA%EF%B8%8F" class="action-btn whatsapp-action" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                    <a href="https://www.booking.com/hotel/br/dos-lagos" class="action-btn booking-action" target="_blank">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Booking.com</span>
+                    </a>
+                    <a href="index.html#acomodacoes" class="action-btn accommodations-action">
+                        <i class="fas fa-bed"></i>
+                        <span>Acomodações</span>
+                    </a>
+                    <a href="index.html" class="action-btn home-action">
+                        <i class="fas fa-home"></i>
+                        <span>Página Inicial</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Hotel dos Lagos</h3>
+                    <p>Oferecemos acomodações confortáveis e um atendimento excepcional para tornar sua estadia inesquecível.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contatos</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> R. Alterosa, 101 - Jardim Vista Alegre, Alfenas - MG, 37132-166</p>
+                        <p><i class="fas fa-phone"></i> (35) 99052-2225</p>
+                        <p><i class="fas fa-envelope"></i> contato@hoteldoslagos.com.br</p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/hoteldoslagos" target="_blank"><i class="fab fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/hoteldoslagos/" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://api.whatsapp.com/send?phone=553599052225&text=Ol%C3%A1%2C%20tudo%20bem%3F%F0%9F%91%8B%F0%9F%8F%BB%20Gostaria%20de%20esclarecer%20umas%20d%C3%BAvidas%20e%20realizar%20uma%20reserva%E2%98%BA%EF%B8%8F" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="index.html#acomodacoes">Acomodações</a>
+                    <a href="https://www.booking.com/hotel/br/dos-lagos" target="_blank">Reservas</a>
+                    <a href="contato.html">Contato</a>
+                </div>
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> Hotel dos Lagos. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fixed Buttons -->
+    <div class="fixed-buttons">
+        <a href="https://api.whatsapp.com/send?phone=553599052225&text=Ol%C3%A1%2C%20tudo%20bem%3F%F0%9F%91%8B%F0%9F%8F%BB%20Gostaria%20de%20esclarecer%20umas%20d%C3%BAvidas%20e%20realizar%20uma%20reserva%E2%98%BA%EF%B8%8F" class="whatsapp-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <button class="back-to-top" id="backToTop">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="assets/js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html>

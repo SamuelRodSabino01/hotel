@@ -604,6 +604,21 @@ h1, h2, h3, h4, h5, h6 {
     flex-wrap: wrap;
 }
 
+.cta-buttons .btn-primary {
+    background: var(--primary-beige);
+    color: var(--primary-blue);
+    border: 2px solid var(--primary-beige);
+    font-weight: 600;
+}
+
+.cta-buttons .btn-primary:hover {
+    background: var(--white);
+    color: var(--primary-blue);
+    border-color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
 .cta-buttons .btn-secondary {
     display: flex;
     align-items: center;
@@ -668,6 +683,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .social-links a i {
     color: var(--white);
+    font-size: 18px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .social-links a:hover {
@@ -817,6 +837,263 @@ h1, h2, h3, h4, h5, h6 {
     .accommodations-grid,
     .services-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+/* Estilos para Página de Contato */
+.contact-hero {
+    padding: 60px 0;
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--hover-blue) 100%);
+    color: var(--white);
+    text-align: center;
+}
+
+.contact-title {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.contact-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-info-section {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.contact-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.contact-card {
+    background: var(--light-gray);
+    padding: 40px 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    transition: var(--transition);
+    border: 3px solid transparent;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.whatsapp-card {
+    border-color: var(--whatsapp-green);
+}
+
+.whatsapp-card:hover {
+    background: rgba(37, 211, 102, 0.05);
+}
+
+.booking-card {
+    border-color: var(--primary-blue);
+}
+
+.booking-card:hover {
+    background: rgba(20, 56, 77, 0.05);
+}
+
+.address-card {
+    border-color: var(--primary-beige);
+}
+
+.address-card:hover {
+    background: rgba(220, 187, 138, 0.05);
+}
+
+.card-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 2.5rem;
+}
+
+.whatsapp-card .card-icon {
+    background: var(--whatsapp-green);
+    color: var(--white);
+}
+
+.booking-card .card-icon {
+    background: var(--primary-blue);
+    color: var(--white);
+}
+
+.address-card .card-icon {
+    background: var(--primary-beige);
+    color: var(--white);
+}
+
+.card-content h3 {
+    font-size: 1.5rem;
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+}
+
+.card-content p {
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--whatsapp-green);
+    color: var(--white);
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    transition: var(--transition);
+    font-size: 1rem;
+}
+
+.btn-whatsapp:hover {
+    background: #1da851;
+    transform: translateY(-2px);
+    box-shadow: var(--box-shadow);
+}
+
+.btn-booking {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--primary-blue);
+    color: var(--white);
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    transition: var(--transition);
+    font-size: 1rem;
+}
+
+.btn-booking:hover {
+    background: var(--hover-blue);
+    transform: translateY(-2px);
+    box-shadow: var(--box-shadow);
+}
+
+.address-info {
+    text-align: left;
+}
+
+.address-info p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.address-info i {
+    color: var(--primary-beige);
+    width: 20px;
+}
+
+.contact-map-section {
+    padding: 80px 0;
+    background: var(--light-gray);
+}
+
+.quick-actions-section {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.actions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.action-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 30px 20px;
+    background: var(--light-gray);
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    transition: var(--transition);
+    box-shadow: var(--box-shadow);
+    color: var(--primary-blue);
+}
+
+.action-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.action-btn i {
+    font-size: 2.5rem;
+}
+
+.action-btn span {
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.whatsapp-action:hover {
+    background: var(--whatsapp-green);
+    color: var(--white);
+}
+
+.booking-action:hover {
+    background: var(--primary-blue);
+    color: var(--white);
+}
+
+.accommodations-action:hover {
+    background: var(--primary-beige);
+    color: var(--white);
+}
+
+.home-action:hover {
+    background: var(--hover-blue);
+    color: var(--white);
+}
+
+/* Responsividade para Página de Contato */
+@media (max-width: 768px) {
+    .contact-title {
+        font-size: 2rem;
+    }
+    
+    .contact-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .actions-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .card-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+    
+    .action-btn i {
+        font-size: 2rem;
     }
     
     .experiences-layout {
