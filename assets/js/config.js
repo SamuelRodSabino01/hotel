@@ -4,7 +4,7 @@ const HotelConfig = {
     hotel: {
         name: "Hotel dos Lagos",
         phone: "+55 11 99999-9999",
-        whatsapp: "553599052225",
+        whatsapp: "5535999052225",
         email: "contato@hoteldoslagos.com.br",
         address: {
             street: "R. Alterosa, 101 - Jardim Vista Alegre",

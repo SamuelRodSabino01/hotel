@@ -663,7 +663,7 @@ function initWhatsApp() {
     if (whatsappBtn) {
         whatsappBtn.addEventListener('click', function() {
             const message = encodeURIComponent('Olá! Gostaria de fazer uma reserva no Hotel dos Lagos.');
-            const phone = '5511999999999'; // Substitua pelo número real
+            const phone = '5535999052225'; // Número do WhatsApp oficial
             const url = `https://api.whatsapp.com/send?phone=${phone}&text=${message}`;
             
             window.open(url, '_blank');
