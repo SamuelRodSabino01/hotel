@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initCarousel();
     initBackToTop();
     initSmoothScroll();
-    initMobileMenu();
 });
 
 // Navbar - Efeito de scroll
@@ -76,6 +75,12 @@ function initCarousel() {
     const nextBtn = document.getElementById('nextBtn');
     const heroSection = document.querySelector('.hero');
     
+    // Verificar se os elementos necessários existem
+    if (slides.length === 0 || !heroSection) {
+        console.warn('Elementos do carrossel não encontrados');
+        return;
+    }
+    
     let currentSlide = 0;
     const totalSlides = slides.length;
     let autoSlideInterval;
@@ -86,17 +91,34 @@ function initCarousel() {
         const img = activeSlide.querySelector('img');
         
         if (img.complete) {
-            const aspectRatio = img.naturalHeight / img.naturalWidth;
-            const containerWidth = heroSection.offsetWidth;
-            const calculatedHeight = Math.max(400, containerWidth * aspectRatio);
-            heroSection.style.height = calculatedHeight + 'px';
+            updateHeight();
         } else {
-            img.onload = function() {
-                const aspectRatio = img.naturalHeight / img.naturalWidth;
-                const containerWidth = heroSection.offsetWidth;
-                const calculatedHeight = Math.max(400, containerWidth * aspectRatio);
-                heroSection.style.height = calculatedHeight + 'px';
-            };
+            img.onload = updateHeight;
+        }
+        
+        function updateHeight() {
+            const containerWidth = heroSection.offsetWidth;
+            const aspectRatio = img.naturalHeight / img.naturalWidth;
+            
+            // Calcular altura baseada na largura do container e aspect ratio da imagem
+            let calculatedHeight = containerWidth * aspectRatio;
+            
+            // Definir limites mínimos e máximos baseados no tamanho da tela
+            const isMobile = window.innerWidth <= 768;
+            const isSmallMobile = window.innerWidth <= 480;
+            
+            if (isSmallMobile) {
+                calculatedHeight = Math.min(calculatedHeight, window.innerHeight * 0.4);
+                calculatedHeight = Math.max(calculatedHeight, 200);
+            } else if (isMobile) {
+                calculatedHeight = Math.min(calculatedHeight, window.innerHeight * 0.5);
+                calculatedHeight = Math.max(calculatedHeight, 250);
+            } else {
+                calculatedHeight = Math.min(calculatedHeight, window.innerHeight * 0.7);
+                calculatedHeight = Math.max(calculatedHeight, 300);
+            }
+            
+            heroSection.style.height = calculatedHeight + 'px';
         }
     }
 
@@ -104,11 +126,15 @@ function initCarousel() {
     function showSlide(index) {
         // Remover classe active de todos os slides e indicadores
         slides.forEach(slide => slide.classList.remove('active'));
-        indicators.forEach(indicator => indicator.classList.remove('active'));
+        if (indicators.length > 0) {
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+        }
         
         // Adicionar classe active ao slide e indicador atual
         slides[index].classList.add('active');
-        indicators[index].classList.add('active');
+        if (indicators[index]) {
+            indicators[index].classList.add('active');
+        }
         
         currentSlide = index;
         
@@ -137,27 +163,33 @@ function initCarousel() {
         clearInterval(autoSlideInterval);
     }
 
-    // Event listeners para botões
-    nextBtn.addEventListener('click', () => {
-        nextSlide();
-        stopAutoSlide();
-        startAutoSlide(); // Reinicia o auto-play
-    });
-
-    prevBtn.addEventListener('click', () => {
-        prevSlide();
-        stopAutoSlide();
-        startAutoSlide(); // Reinicia o auto-play
-    });
-
-    // Event listeners para indicadores
-    indicators.forEach((indicator, index) => {
-        indicator.addEventListener('click', () => {
-            showSlide(index);
+    // Event listeners para botões (apenas se existirem)
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
             stopAutoSlide();
             startAutoSlide(); // Reinicia o auto-play
         });
-    });
+    }
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            prevSlide();
+            stopAutoSlide();
+            startAutoSlide(); // Reinicia o auto-play
+        });
+    }
+
+    // Event listeners para indicadores (apenas se existirem)
+    if (indicators.length > 0) {
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                showSlide(index);
+                stopAutoSlide();
+                startAutoSlide(); // Reinicia o auto-play
+            });
+        });
+    }
 
     // Pausar auto-play quando mouse estiver sobre o carrossel
     heroSection.addEventListener('mouseenter', stopAutoSlide);
@@ -263,17 +295,88 @@ function initSmoothScroll() {
     });
 }
 
+// Função de teste para o hamburger
+window.testHamburgerClick = function() {
+    console.log('🧪 TESTE MANUAL DO HAMBURGER');
+    
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    
+    if (!hamburger || !navMenu) {
+        console.error('❌ Elementos não encontrados!');
+        return;
+    }
+    
+    console.log('📍 Posição do hamburger:', hamburger.getBoundingClientRect());
+    console.log('📍 Posição do navMenu:', navMenu.getBoundingClientRect());
+    
+    // Verificar se há elementos sobrepostos
+    const rect = hamburger.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+    
+    const elementAtPoint = document.elementFromPoint(centerX, centerY);
+    console.log('🎯 Elemento no centro do hamburger:', elementAtPoint);
+    console.log('🎯 É o próprio hamburger?', elementAtPoint === hamburger || hamburger.contains(elementAtPoint));
+    
+    // Simular clique
+    console.log('🖱️ Simulando clique...');
+    hamburger.click();
+    
+    // Verificar estado após clique
+    setTimeout(() => {
+        console.log('📊 Estado após clique:');
+        console.log('- NavMenu ativo:', navMenu.classList.contains('active'));
+        console.log('- Hamburger ativo:', hamburger.classList.contains('active'));
+    }, 100);
+};
+
+// Função para verificar se o hamburger está visível
+window.checkHamburgerVisibility = function() {
+    const hamburger = document.getElementById('hamburger');
+    if (!hamburger) {
+        console.error('❌ Hamburger não encontrado!');
+        return;
+    }
+    
+    const styles = getComputedStyle(hamburger);
+    const rect = hamburger.getBoundingClientRect();
+    
+    console.log('👁️ VISIBILIDADE DO HAMBURGER:');
+    console.log('- Display:', styles.display);
+    console.log('- Visibility:', styles.visibility);
+    console.log('- Opacity:', styles.opacity);
+    console.log('- Z-index:', styles.zIndex);
+    console.log('- Position:', styles.position);
+    console.log('- Pointer events:', styles.pointerEvents);
+    console.log('- Dimensões:', rect);
+    console.log('- Está na viewport?', rect.width > 0 && rect.height > 0);
+};
+
+// Disponibilizar função globalmente para teste no console
+window.testHamburger = window.testHamburgerClick;
+
 // Menu mobile (hamburger)
 function initMobileMenu() {
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('nav-menu');
     
-    hamburger.addEventListener('click', function() {
+    // Verificar se os elementos existem antes de adicionar event listeners
+    if (!hamburger || !navMenu) {
+        console.warn('Elementos do menu mobile não encontrados');
+        return;
+    }
+    
+    hamburger.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
         navMenu.classList.toggle('active');
         hamburger.classList.toggle('active');
         
         // Animar linhas do hamburger
         const spans = hamburger.querySelectorAll('span');
+        
         if (hamburger.classList.contains('active')) {
             spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
             spans[1].style.opacity = '0';
@@ -456,7 +559,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Service Worker para cache (opcional)
-if ('serviceWorker' in navigator) {
+if ('serviceWorker' in navigator && HotelConfig.performance.enableServiceWorker) {
     window.addEventListener('load', function() {
         navigator.serviceWorker.register('/sw.js')
             .then(registration => {
