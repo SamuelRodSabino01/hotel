@@ -114,7 +114,7 @@ function initCarousel() {
                 calculatedHeight = Math.min(calculatedHeight, window.innerHeight * 0.5);
                 calculatedHeight = Math.max(calculatedHeight, 250);
             } else {
-                calculatedHeight = Math.min(calculatedHeight, window.innerHeight * 0.7);
+                calculatedHeight = Math.min(calculatedHeight, window.innerHeight * 0.9);
                 calculatedHeight = Math.max(calculatedHeight, 300);
             }
             
